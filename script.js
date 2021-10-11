@@ -1,10 +1,9 @@
 console.log("hello, World")
 
+const ARRAY = [["A1", "A2", "A3", "A4", "A5"]];
 let column = 4;
 let rows = 4;
 let arr = [[1]];
-
-const ARRAY = ["A1", "A2", "A3", "A4", "A5"];
 
 function shuffleArray(ARRAY){
     let shuffledArr = [];
