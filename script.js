@@ -1,12 +1,12 @@
-console.log("hello, World")
+console.log("Hello, World")
 
-const ARRAY = [["A1", "A2", "A3", "A4", "A5"]];
-let column = 4;
-let rows = 4;
+const ARRAY = ["A1", "A2", "A3", "A4", "A5", "A6"];
+let column = 3;
+let rows = 2;
 let arr = [[1]];
+let shuffledArr = [];
 
 function shuffleArray(ARRAY){
-    let shuffledArr = [];
     function randInd(){
          return Math.floor(Math.random() * ARRAY.length);
     }
@@ -19,17 +19,26 @@ function shuffleArray(ARRAY){
     return shuffledArr;
 }
 
-console.log(shuffleArray(ARRAY))
+function arraySplice(array, column){ 
+    let newArr = [];
+    let count = 1;
+    while(count <= rows){
+    newArr.push(array.splice(0, column));
+    count++;
+    }
+    return newArr;
+}
 
+let tableArr = arraySplice(shuffleArray(ARRAY), column);
+console.log(tableArr)
 
 window.onload = function(){
-
-    arr.map(array => {
-document.getElementById("card").insertAdjacentHTML("beforeend", 
-    `<tr>${array.map(item =>
-        `<td>${item}</td>`.repeat(column))}
-    </tr>`.repeat(rows)
-    )
-})
-
+    tableArr.map(array => {
+    document.getElementById("card").insertAdjacentHTML("beforeend",  
+    `<tr>${array.map(item => 
+        `<td>${item}</td>`)}
+    <tr>`
+                )}
+            )
+    
 }
