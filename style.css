@@ -1,5 +1,28 @@
-#card{
+#card-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 300px;
-    border: 2px solid blue;
-    height: 300px;
+    background-color: orange;
+}
+
+h1{
+    text-align: center;
+    width: 180px;
+    color: black;
+    height: 40px;
+    border-radius: 15px;
+}
+
+#card{
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.cells{
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
 }

@@ -1,8 +1,8 @@
 console.log("Hello, World")
 
-const ARRAY = ["A1", "A2", "A3", "A4", "A5", "A6"];
+const ARRAY = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"];
 let column = 3;
-let rows = 2;
+let rows = 3;
 let arr = [[1]];
 let shuffledArr = [];
 
@@ -35,10 +35,8 @@ console.log(tableArr)
 window.onload = function(){
     tableArr.map(array => {
     document.getElementById("card").insertAdjacentHTML("beforeend",  
-    `<tr>${array.map(item => 
-        `<td>${item}</td>`)}
-    <tr>`
-                )}
-            )
+    array.map(item => `<td class="cells">${item}</td>`).join("")
+        )
+    })
     
 }
