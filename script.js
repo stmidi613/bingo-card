@@ -1,10 +1,10 @@
 console.log("Hello, World")
 
-const ARRAY = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"];
+const ARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 let column = 3;
 let rows = 3;
-let arr = [[1]];
 let shuffledArr = [];
+let numberOfCards = 2;
 
 function shuffleArray(ARRAY){
     function randInd(){
@@ -33,10 +33,17 @@ let tableArr = arraySplice(shuffleArray(ARRAY), column);
 console.log(tableArr)
 
 window.onload = function(){
-    tableArr.map(array => {
-    document.getElementById("card").insertAdjacentHTML("beforeend",  
-    array.map(item => `<td class="cells">${item}</td>`).join("")
-        )
-    })
     
+    document.getElementById("cards-container").insertAdjacentHTML("beforeend",
+    
+    `<div class="card-wrapper">
+        <h1>Bingo Card</h1>
+        <table class="card">
+        ${tableArr.map(array => `<tr>
+            ${array.map(item => `<td class="cells">${item}</td>`).join("")}
+            </tr>`).join("")}
+        </table>
+        </div>`.repeat(numberOfCards)
+    )
+
 }
