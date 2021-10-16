@@ -5,6 +5,7 @@ let column = 3;
 let rows = 3;
 let shuffledArr = [];
 let numberOfCards = 2;
+let numberOfCardsArr = [...Array(numberOfCards)]
 
 function shuffleArray(ARRAY){
     function randInd(){
@@ -33,7 +34,7 @@ let tableArr = arraySplice(shuffleArray(ARRAY), column);
 console.log(tableArr)
 
 window.onload = function(){
-    
+    numberOfCardsArr.forEach(card => {
     document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
     `<div class="card-wrapper">
@@ -43,7 +44,7 @@ window.onload = function(){
             ${array.map(item => `<td class="cells">${item}</td>`).join("")}
             </tr>`).join("")}
         </table>
-        </div>`.repeat(numberOfCards)
-    )
-
+        </div>`
+        )
+    })
 }
