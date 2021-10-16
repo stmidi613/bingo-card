@@ -24,14 +24,14 @@
             </select><br>
 
             <label for="card-size">Card Size</label>
-            <select id="card-size">
-                <option value="3X3" class="card-size">3 X 3</option>
-                <option value="5X5" class="card-size">5 X 5</option>
-                <option value="3X3" class="card-size">7 X 7</option>
+            <select id="card-size" value="3" onchange="cardSize()">
+                <option value="3" class="card-size">3 X 3</option>
+                <option value="5" class="card-size">5 X 5</option>
+                <option value="7" class="card-size">7 X 7</option>
             </select><br>
 
             <label for="card-number">Number Of Cards</label>
-                <input type="number" id="card-number" min="1" max="25" onchange="changeNumberOfCards()"><br>
+                <input type="number" id="card-number" min="1" max="25" value="1" onchange="changeNumberOfCards()"><br>
 
             <button class="card-button" onclick="generateCards();">New Cards</button>
         

@@ -2,15 +2,21 @@ console.log("Hello, World")
 
 let column = 3;
 let rows = 3;
-let numberOfCards = 2;
-let numberOfCardsArr = [...Array(numberOfCards)]
+let numberOfCards = 1;
+let numberOfCardsArr = [...Array(Number(numberOfCards))]
 
 function changeNumberOfCards(){
-    //document.getElement... has a problem
-    numberOfCards = document.getElementById("card-number").innerHTML;
-    console.log(numberOfCards);
-    numberOfCardsArr = [...Array(numberOfCards)];
+    numberOfCards = document.getElementById("card-number").value;
+    numberOfCardsArr = [...Array(Number(numberOfCards))];
     generateCards(); 
+}
+//Need to adjust the css for this part but function works
+function cardSize(){
+    column = document.getElementById("card-size").value;
+    rows = document.getElementById("card-size").value;
+    console.log(column);
+    console.log(rows);
+    generateCards();
 }
 
 function shuffleArray(arr){
