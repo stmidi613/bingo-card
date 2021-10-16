@@ -5,6 +5,14 @@ let rows = 3;
 let numberOfCards = 2;
 let numberOfCardsArr = [...Array(numberOfCards)]
 
+function changeNumberOfCards(){
+    //document.getElement... has a problem
+    numberOfCards = document.getElementById("card-number").innerHTML;
+    console.log(numberOfCards);
+    numberOfCardsArr = [...Array(numberOfCards)];
+    generateCards(); 
+}
+
 function shuffleArray(arr){
     let shuffledArr = [];
     function randInd(){
