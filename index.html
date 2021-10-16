@@ -9,7 +9,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div id="cards-container">
     </div>
+
+    <div id="form">
+        <form>
+
+            <label for="card-type">Type Of Cards</label>
+            <select id="card-type">
+                <option value="christmas" class="christmas">Christmas</option>
+                <option value="halloween" class="halloween">Halloween</option>
+                <option value="number" class="number">Number</option>
+            </select><br>
+
+            <label for="card-size">Card Size</label>
+            <select id="card-size">
+                <option value="3X3" class="card-size">3 X 3</option>
+                <option value="5X5" class="card-size">5 X 5</option>
+                <option value="3X3" class="card-size">7 X 7</option>
+            </select><br>
+
+            <label for="card-number">Number Of Cards</label>
+                <input type="number" min="1" max="25"><br>
+
+            <button class="card-button" onclick="generateCards();">New Cards</button>
+        
+        </form>
+    </div>
+
 </body>
 </html>
