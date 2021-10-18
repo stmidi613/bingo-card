@@ -1,25 +1,36 @@
 console.log("Hello, World")
 
-let number = 1
-let columns = 5;
-let rows = 5;
+let number = 1;
+let columns = 3;
+let rows = 3;
+
 let numberOfCards = 1;
 let numberOfCardsArr = [...Array(Number(numberOfCards))]
-let numberFillArr = [...Array(columns * rows)]
-console.log(numberFillArr.fill(numberFillArr.map(item => item = number++))[0]);
+
+let cardTypeValue = 20;
+let numberFillArr = [...Array(cardTypeValue)];
+let numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+
+function typeOfCard(){
+    cardTypeValue = document.getElementById("card-type").value;
+    console.log(typeof(cardTypeValue))
+    numberFillArr = [...Array(Number(cardTypeValue))];
+    numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+    generateCards();
+}
+
 function changeNumberOfCards(){
     numberOfCards = document.getElementById("card-number").value;
     numberOfCardsArr = [...Array(Number(numberOfCards))];
     generateCards(); 
 }
-//Need to adjust the css for this part but function works
+
 function cardSize(){
     columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
-    console.log(columns);
-    console.log(rows);
     generateCards();
 }
+
 
 function shuffleArray(arr){
     let shuffledArr = [];
@@ -48,9 +59,9 @@ function arraySplice(array, columns){
 function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
-        const NUMARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        //const NUMARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         
-        let tableArr = arraySplice(shuffleArray(NUMARRAY), columns);
+        let tableArr = arraySplice(shuffleArray(numArr), columns);
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">

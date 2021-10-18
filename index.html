@@ -17,10 +17,12 @@
         <form>
 
             <label for="card-type">Type Of Cards</label>
-            <select id="card-type">
-                <option value="christmas" class="christmas">Christmas</option>
-                <option value="halloween" class="halloween">Halloween</option>
-                <option value="number" class="number">Number</option>
+            <select id="card-type" onchange="typeOfCard()">
+                <option value="20" class="card-type">Numbers 1-20</option>
+                <option value="50" class="card-type">Numbers 1-50</option>
+                <option value="100" class="card-type">Numbers 1-100</option>
+                <option value="christmas" class="card-type">Christmas</option>
+                <option value="halloween" class="card-type">Halloween</option>
             </select><br>
 
             <label for="card-size">Card Size</label>
@@ -33,7 +35,7 @@
             <label for="card-number">Number Of Cards</label>
                 <input type="number" id="card-number" min="1" max="25" value="1" onchange="changeNumberOfCards()"><br>
 
-            <button class="card-button" onclick="generateCards();">New Cards</button>
+            <button class="card-button" onclick="generateCards();">Reset</button>
         
         </form>
     </div>
