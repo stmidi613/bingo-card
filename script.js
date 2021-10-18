@@ -1,10 +1,12 @@
 console.log("Hello, World")
 
-let column = 3;
-let rows = 3;
+let number = 1
+let columns = 5;
+let rows = 5;
 let numberOfCards = 1;
 let numberOfCardsArr = [...Array(Number(numberOfCards))]
-
+let numberFillArr = [...Array(columns * rows)]
+console.log(numberFillArr.fill(numberFillArr.map(item => item = number++))[0]);
 function changeNumberOfCards(){
     numberOfCards = document.getElementById("card-number").value;
     numberOfCardsArr = [...Array(Number(numberOfCards))];
@@ -12,9 +14,9 @@ function changeNumberOfCards(){
 }
 //Need to adjust the css for this part but function works
 function cardSize(){
-    column = document.getElementById("card-size").value;
+    columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
-    console.log(column);
+    console.log(columns);
     console.log(rows);
     generateCards();
 }
@@ -33,12 +35,12 @@ function shuffleArray(arr){
     return shuffledArr;
 }
 
-function arraySplice(array, column){ 
+function arraySplice(array, columns){ 
     let newArr = [];
     let count = 1;
     while(count <= rows){
-    newArr.push(array.splice(0, column));
-    count++;
+        newArr.push(array.splice(0, columns));
+        count++;
     }
     return newArr;
 }
@@ -46,8 +48,9 @@ function arraySplice(array, column){
 function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
-        const ARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
-        let tableArr = arraySplice(shuffleArray(ARRAY), column);
+        const NUMARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        
+        let tableArr = arraySplice(shuffleArray(NUMARRAY), columns);
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">
