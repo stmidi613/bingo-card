@@ -16,18 +16,19 @@ function typeOfCard(){
     console.log(typeof(cardTypeValue))
     numberFillArr = [...Array(Number(cardTypeValue))];
     numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
-    generateCards();
 }
 
 function changeNumberOfCards(){
     numberOfCards = document.getElementById("card-number").value;
     numberOfCardsArr = [...Array(Number(numberOfCards))];
+    numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
     generateCards(); 
 }
 
 function cardSize(){
     columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
+    numArr = numArr;
     generateCards();
 }
 
@@ -59,8 +60,8 @@ function arraySplice(array, columns){
 function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
-        //const NUMARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-        
+        //numArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+        typeOfCard();
         let tableArr = arraySplice(shuffleArray(numArr), columns);
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
