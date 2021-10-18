@@ -1,16 +1,15 @@
 #cards-container{
-    display: flex;
+    display: flex wrap;
     width: 100vw;
     height: max-content;
+    margin: auto !important;
 }
 
 .card-wrapper{
+    display: inline-block;
     margin: 10px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
+    width: max-content;
     background-color: orange;
 }
 
