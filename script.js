@@ -13,22 +13,19 @@ let numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--
 
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
-    console.log(typeof(cardTypeValue))
     numberFillArr = [...Array(Number(cardTypeValue))];
     numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
 }
 
 function changeNumberOfCards(){
     numberOfCards = document.getElementById("card-number").value;
-    numberOfCardsArr = [...Array(Number(numberOfCards))];
-    numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
-    generateCards(); 
+    numberOfCardsArr = [...Array(Number(numberOfCards))]; 
+    generateCards();
 }
 
 function cardSize(){
     columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
-    numArr = numArr;
     generateCards();
 }
 
@@ -39,11 +36,13 @@ function shuffleArray(arr){
          return Math.floor(Math.random() * arr.length);
     }
     let count = arr.length;
+    console.log(arr.length)
     while(0 !== count){
         let randomInd = randInd();
         shuffledArr.push(arr.splice(randomInd, 1)[0]);
         count--;
     }
+    console.log(shuffledArr)
     return shuffledArr;
 }
 
@@ -54,14 +53,15 @@ function arraySplice(array, columns){
         newArr.push(array.splice(0, columns));
         count++;
     }
+    console.log(newArr)
     return newArr;
 }
 
 function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
-        //numArr = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         typeOfCard();
+        console.log(numArr)
         let tableArr = arraySplice(shuffleArray(numArr), columns);
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
