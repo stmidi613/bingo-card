@@ -20,6 +20,22 @@ body{
     width: 50px;
 }
 
+#reset-button{
+    font-size: 16px;
+    background-color: paleturquoise;
+    border-radius: 10%;
+    padding: 10px;
+    width: 100px;
+    border: 2px solid #0aa;
+}
+
+#reset-button:hover{
+    border: 2px solid paleturquoise;
+    background-color: #0aa;
+    cursor: pointer;
+}
+
+
 #cards-container{
     display: flex wrap;
     width: 100vw;

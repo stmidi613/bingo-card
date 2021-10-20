@@ -7,14 +7,16 @@ let rows = 3;
 let numberOfCards = 1;
 let numberOfCardsArr = [...Array(Number(numberOfCards))]
 
+let typeOfCardArr = [];
 let cardTypeValue = 20;
 let numberFillArr = [...Array(cardTypeValue)];
-let numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+let ChristmasArr = [];
+let halloweenArr = [];
 
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
     numberFillArr = [...Array(Number(cardTypeValue))];
-    numArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+    typeOfCardArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
 }
 
 function changeNumberOfCards(){
@@ -61,8 +63,8 @@ function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
         typeOfCard();
-        console.log(numArr)
-        let tableArr = arraySplice(shuffleArray(numArr), columns);
+        console.log(typeOfCardArr)
+        let tableArr = arraySplice(shuffleArray(typeOfCardArr), columns);
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">
