@@ -9,35 +9,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div id="cards-container">
-    </div>
+
+    <h1 id="title">Bingo Card Generator</h1>
 
     <div id="form">
         <form>
 
-            <label for="card-type">Type Of Cards</label>
+            <label for="card-type" class="form-item">Type Of Cards</label>
             <select id="card-type" onchange="generateCards()">
                 <option value="20" class="card-type">Numbers 1-20</option>
                 <option value="50" class="card-type">Numbers 1-50</option>
                 <option value="100" class="card-type">Numbers 1-100</option>
                 <option value="christmas" class="card-type">Christmas</option>
                 <option value="halloween" class="card-type">Halloween</option>
-            </select><br>
+            </select>
+            <br>
 
-            <label for="card-size">Card Size</label>
-            <select id="card-size" value="3" onchange="cardSize()">
+            <label for="card-size" class="form-item">Card Size</label>
+            <select id="card-size" class="form-item" value="3" onchange="cardSize()">
                 <option value="3" class="card-size">3 X 3</option>
                 <option value="5" class="card-size">5 X 5</option>
                 <option value="7" class="card-size">7 X 7</option>
-            </select><br>
+            </select>
+            <br>
 
-            <label for="card-number">Number Of Cards</label>
+            <label for="card-number" class="form-item">Number Of Cards</label>
                 <input type="number" id="card-number" min="1" max="25" value="1" onchange="changeNumberOfCards()"><br>
 
-            <button class="card-button" onclick="generateCards();">Reset</button>
+            <button id="card-button" class="form-item" onclick="generateCards();">Reset</button>
         
         </form>
+    </div>
+
+    <div id="cards-container">
     </div>
 
 </body>

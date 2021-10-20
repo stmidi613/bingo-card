@@ -1,3 +1,25 @@
+body{
+    background-color: khaki;
+}
+
+#title{
+    margin: 20px;
+    text-align: center;
+    width: 100vw;
+}
+
+#form{
+    margin: 10px;
+}
+
+.form-item{
+    margin: 20px;
+}
+
+#card-number{
+    width: 50px;
+}
+
 #cards-container{
     display: flex wrap;
     width: 100vw;
@@ -10,12 +32,13 @@
     margin: 10px;
     padding: 10px;
     width: max-content;
-    background-color: orange;
+    background-color: paleturquoise;
 }
 
-h1{
+h2{
+    font-size: 36px;
     text-align: center;
-    width: 180px;
+    width: auto;
     color: black;
     height: 40px;
     border-radius: 15px;

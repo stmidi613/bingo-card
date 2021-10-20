@@ -66,7 +66,7 @@ function generateCards(){
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">
-                <h1>Bingo Card</h1>
+                <h2>Bingo Card</h2>
                 <table class="card">
                 ${tableArr.map(array => `<tr>
                     ${array.map(item => `<td class="cells">${item}</td>`).join("")}
