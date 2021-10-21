@@ -67,8 +67,12 @@ h2{
 
 .cells{
     height: 100px;
-    width: 100px;
+    width: 100px !important;
     text-align: center;
     border: 1px solid black;
     font: 20px solid black;
+}
+
+.picture{
+    max-width: 60px;
 }

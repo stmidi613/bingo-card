@@ -10,8 +10,35 @@ let numberOfCardsArr = [...Array(Number(numberOfCards))]
 let typeOfCardArr = [];
 let cardTypeValue = 20;
 let numberFillArr = [...Array(cardTypeValue)];
-let ChristmasArr = [];
-let halloweenArr = [];
+
+let theChristmasArr = [];
+
+let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="blackcat">`,
+                    `<img src="pictures/ghost.svg" class="picture" alt="ghost">`,
+                    `<img src="pictures/tombstone.svg" class="picture" alt="tombstone">`,
+                    `<img src="pictures/bat.svg" class="picture" alt="bat">`,
+                    `<img src="pictures/pumpkin.svg" class="picture" alt="pumpkin">`,
+                    `<img src="pictures/witch.svg" class="picture" alt="witch">`,
+                    `<img src="pictures/mummy.svg" class="picture" alt="mummy">`,
+                    `<img src="pictures/cobweb.svg" class="picture" alt="cobweb">`,
+                    `<img src="pictures/frankenstein.svg" class="picture" alt="frankenstein">`,
+                    `<img src="pictures/coffin.png" class="picture" alt="coffin">`,
+                    `<img src="pictures/skeleton.png" class="picture" alt="skeleton">`,
+                    `<img src="pictures/grimm-reaper.png" class="picture" alt="grim reaper">`,
+                    `<img src="pictures/haunted-house.png" class="picture" alt="haunted house">`,
+                    `<img src="pictures/zombie.png" class="picture" alt="zombie">`,
+                    `<img src="pictures/vampire.png" class="picture" alt="vampire">`,
+                    `<img src="pictures/candy.png" class="picture" alt="candy">`,
+                    `<img src="pictures/werewolf.svg" class="picture" alt="werewolf">`,
+                    `<img src="pictures/graveyard.svg" class="picture" alt="graveyard">`,
+                    `<img src="pictures/skull.png" class="picture" alt="skull">`,
+                    `<img src="pictures/spider.png" class="picture" alt="spider">`,
+                    `<img src="pictures/scarecrow.png" class="picture" alt="scarecrow">`,
+                    `<img src="pictures/owl.png" class="picture" alt="owl">`,
+                    `<img src="pictures/masks.png" class="picture" alt="masks">`,
+                    `<img src="pictures/crow.svg" class="picture" alt="crow">`,
+                    `<img src="pictures/demon.png" class="picture" alt="demon">`
+                ];
 
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
@@ -63,7 +90,6 @@ function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
         typeOfCard();
-        console.log(typeOfCardArr)
         let tableArr = arraySplice(shuffleArray(typeOfCardArr), columns);
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
