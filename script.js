@@ -14,7 +14,7 @@ let theChristmasArr = [`<img src="pictures/deer.svg" class="picture" alt="deer">
                     `<img src="pictures/mistletoe.png" class="picture" alt="mistletoe">`,
                     `<img src="pictures/candle.svg" class="picture" alt="candle">`,
                     `<img src="pictures/santa.svg" class="picture" alt="santa">`,
-                    `<img src="pictures/christmastree" class="picture" alt="christmastree">`,
+                    `<img src="pictures/christmastree.png" class="picture" alt="christmastree">`,
                     `<img src="pictures/wreath.png" class="picture" alt="wreath">`,
                     `<img src="pictures/bells.svg" class="picture" alt="bells">`,
                     `<img src="pictures/elf.png" class="picture" alt="elf">`,
@@ -27,7 +27,14 @@ let theChristmasArr = [`<img src="pictures/deer.svg" class="picture" alt="deer">
                     `<img src="pictures/sleigh.svg" class="picture" alt="sleigh">`,
                     `<img src="pictures/snowflake.svg" class="picture" alt="snowflake">`,
                     `<img src="pictures/snowman.svg" class="picture" alt="snowman">`,
-                    `<img src="pictures/manger.jpg" class="picture" alt="mager">`];
+                    `<img src="pictures/manger.jpg" class="picture" alt="mager">`,
+                    'balls',
+                    'milk-and-cookies',
+                    'carolers',
+                    'church',
+                    'Dec 25th',
+                    'toys',
+                    'dinner'];
 
 let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="blackcat">`,
                     `<img src="pictures/ghost.svg" class="picture" alt="ghost">`,
@@ -58,8 +65,15 @@ let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="black
 
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
+    if(cardTypeValue === "100" || cardTypeValue || "50"){
+        document.getElementById("seven").style.visibility = "hidden";
+    }else{
+        document.getElementById("seven").style.visibility = "visible";
+    }
     if(cardTypeValue === "halloweenArr"){
-        typeOfCardArr = halloweenArr.map(item => item);
+        typeOfCardArr = halloweenArr.map(pic => pic);
+    }else if(cardTypeValue === "theChristmasArr"){
+        typeOfCardArr = theChristmasArr.map(pic => pic);
     }else{
         numberFillArr = [...Array(Number(cardTypeValue))];
         typeOfCardArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];

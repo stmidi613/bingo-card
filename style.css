@@ -76,3 +76,7 @@ h2{
 .picture{
     max-width: 60px;
 }
+
+#seven{
+    visibility: visible;
+}
