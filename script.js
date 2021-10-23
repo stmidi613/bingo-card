@@ -10,7 +10,24 @@ let typeOfCardArr = [];
 let cardTypeValue = 20;
 let numberFillArr = [...Array(cardTypeValue)];
 
-let theChristmasArr = [];
+let theChristmasArr = [`<img src="pictures/deer.svg" class="picture" alt="deer">`,
+                    `<img src="pictures/mistletoe.png" class="picture" alt="mistletoe">`,
+                    `<img src="pictures/candle.svg" class="picture" alt="candle">`,
+                    `<img src="pictures/santa.svg" class="picture" alt="santa">`,
+                    `<img src="pictures/christmastree" class="picture" alt="christmastree">`,
+                    `<img src="pictures/wreath.png" class="picture" alt="wreath">`,
+                    `<img src="pictures/bells.svg" class="picture" alt="bells">`,
+                    `<img src="pictures/elf.png" class="picture" alt="elf">`,
+                    `<img src="pictures/candy-cane.png" class="picture" alt="candycane">`,
+                    `<img src="pictures/stocking.svg" class="picture" alt="stocking">`,
+                    `<img src="pictures/present.svg" class="picture" alt="present">`,
+                    `<img src="pictures/lights.png" class="picture" alt="lights">`,
+                    `<img src="pictures/gingerbread.png" class="picture" alt="gingerbread">`,
+                    `<img src="pictures/eggnog.jpg" class="picture" alt="eggnog">`,
+                    `<img src="pictures/sleigh.svg" class="picture" alt="sleigh">`,
+                    `<img src="pictures/snowflake.svg" class="picture" alt="snowflake">`,
+                    `<img src="pictures/snowman.svg" class="picture" alt="snowman">`,
+                    `<img src="pictures/manger.jpg" class="picture" alt="mager">`];
 
 let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="blackcat">`,
                     `<img src="pictures/ghost.svg" class="picture" alt="ghost">`,
