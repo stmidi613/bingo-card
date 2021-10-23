@@ -42,11 +42,8 @@ let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="black
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
     if(cardTypeValue === "halloweenArr"){
-        //cardTypeValue = document.getElementById("card-type").value;
-        typeOfCardArr = halloweenArr;
-        console.log(typeOfCardArr)
+        typeOfCardArr = halloweenArr.map(item => item);
     }else{
-        //cardTypeValue = document.getElementById("card-type").value;
         numberFillArr = [...Array(Number(cardTypeValue))];
         typeOfCardArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
     }
@@ -81,6 +78,7 @@ function shuffleArray(arr){
     return shuffledArr;
 }
 
+//this function splices the array into smaller arrays so it can fit into a table
 function arraySplice(array, columns){ 
     let newArr = [];
     let count = 1;
@@ -88,7 +86,6 @@ function arraySplice(array, columns){
         newArr.push(array.splice(0, columns));
         count++;
     }
-    console.log(newArr)
     return newArr;
 }
 
