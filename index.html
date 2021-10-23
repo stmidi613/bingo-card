@@ -26,11 +26,15 @@
             <br>
 
             <label for="card-size" class="form-item">Card Size</label>
-            <select id="card-size" class="form-item" value="3" onchange="cardSize()">
+            <select id="card-size" class="form-item" value="3" onchange="changeCardSize()">
                 <option value="3" class="card-size">3 X 3</option>
                 <option value="5" class="card-size">5 X 5</option>
                 <option value="7" id="seven" class="card-size">7 X 7</option>
             </select>
+            <p id="error-display">*The 7 X 7 card size is only compatible with Number 1-50 and Number 1-100.
+                <br>
+                <span>*The Numbers 1-20 option should only by used with the 3 X 3 card size.</span>
+            </p>
             <br>
 
             <label for="card-number" class="form-item">Number Of Cards</label>

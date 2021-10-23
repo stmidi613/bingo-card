@@ -78,5 +78,10 @@ h2{
 }
 
 #seven{
-    visibility: visible;
+    display: none;
+}
+
+#error-display{
+    color: red;
+    margin-left: 20px;
 }

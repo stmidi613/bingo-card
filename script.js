@@ -27,14 +27,15 @@ let theChristmasArr = [`<img src="pictures/deer.svg" class="picture" alt="deer">
                     `<img src="pictures/sleigh.svg" class="picture" alt="sleigh">`,
                     `<img src="pictures/snowflake.svg" class="picture" alt="snowflake">`,
                     `<img src="pictures/snowman.svg" class="picture" alt="snowman">`,
-                    `<img src="pictures/manger.jpg" class="picture" alt="mager">`,
-                    'balls',
-                    'milk-and-cookies',
-                    'carolers',
-                    'church',
-                    'Dec 25th',
-                    'toys',
-                    'dinner'];
+                    `<img src="pictures/manger.jpg" class="picture" alt="manger">`,
+                    `<img src="pictures/balls.png" class="picture" alt="balls">`,
+                    `<img src="pictures/three-wise-men.svg" class="picture" alt="three wise men">`,
+                    `<img src="pictures/carolers.jpg" class="picture" alt="carolers">`,
+                    `<img src="pictures/church.png" class="picture" alt="church">`,
+                    `<img src="pictures/snowglobe.png" class="picture" alt="snowglobe">`,
+                    `<img src="pictures/toys.png" class="picture" alt="toys">`,
+                    `<img src="pictures/card.png" class="picture" alt="card">`
+                ];
 
 let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="blackcat">`,
                     `<img src="pictures/ghost.svg" class="picture" alt="ghost">`,
@@ -63,13 +64,15 @@ let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="black
                     `<img src="pictures/demon.png" class="picture" alt="demon">`
                 ];
 
+//This function gets the array for the generateCards function and set the visibility of 7 X 7 option.
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
-    if(cardTypeValue === "100" || cardTypeValue || "50"){
-        document.getElementById("seven").style.visibility = "hidden";
+    if(cardTypeValue === "100" || cardTypeValue === "50"){
+        document.getElementById("seven").style.display = "unset";
     }else{
-        document.getElementById("seven").style.visibility = "visible";
+        document.getElementById("seven").style.display = "none";
     }
+
     if(cardTypeValue === "halloweenArr"){
         typeOfCardArr = halloweenArr.map(pic => pic);
     }else if(cardTypeValue === "theChristmasArr"){
@@ -80,19 +83,21 @@ function typeOfCard(){
     }
 }
 
+//This changes the number of cards displayed.
 function changeNumberOfCards(){
     numberOfCards = document.getElementById("card-number").value;
     numberOfCardsArr = [...Array(Number(numberOfCards))]; 
     generateCards();
 }
 
-function cardSize(){
+//This changes the size of the card.
+function changeCardSize(){
     columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
     generateCards();
 }
 
-
+//This rearranges the array so that all cards are different and random.
 function shuffleArray(arr){
     let shuffledArr = [];
     function randInd(){
@@ -109,7 +114,7 @@ function shuffleArray(arr){
     return shuffledArr;
 }
 
-//this function splices the array into smaller arrays so it can fit into a table
+//This function splices the array into smaller arrays so it can fit into a table.
 function arraySplice(array, columns){ 
     let newArr = [];
     let count = 1;
