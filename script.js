@@ -1,6 +1,5 @@
 console.log("Hello, World")
 
-let number = 1;
 let columns = 3;
 let rows = 3;
 
@@ -42,8 +41,15 @@ let halloweenArr = [`<img src="pictures/blackcat.svg" class="picture" alt="black
 
 function typeOfCard(){
     cardTypeValue = document.getElementById("card-type").value;
-    numberFillArr = [...Array(Number(cardTypeValue))];
-    typeOfCardArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+    if(cardTypeValue === "halloweenArr"){
+        //cardTypeValue = document.getElementById("card-type").value;
+        typeOfCardArr = halloweenArr;
+        console.log(typeOfCardArr)
+    }else{
+        //cardTypeValue = document.getElementById("card-type").value;
+        numberFillArr = [...Array(Number(cardTypeValue))];
+        typeOfCardArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+    }
 }
 
 function changeNumberOfCards(){
