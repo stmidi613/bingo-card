@@ -10,6 +10,7 @@ let typeOfCardArr = [];
 let cardTypeValue = 20;
 let numberFillArr = [...Array(cardTypeValue)];
 
+let cardTitle = "";
 
 //This function generates the Christmas pictures array from the Christmas folder.
 function createChristmasArr(){
@@ -44,11 +45,14 @@ function typeOfCard(){
 
     if(cardTypeValue === "halloweenArr"){
         typeOfCardArr = createHalloweenArr();
+        cardTitle = "Halloween Bingo";
     }else if(cardTypeValue === "theChristmasArr"){
         typeOfCardArr = createChristmasArr();
+        cardTitle = "Christmas Bingo";
     }else{
         numberFillArr = [...Array(Number(cardTypeValue))];
         typeOfCardArr = numberFillArr.fill(numberFillArr.map(item => item = cardTypeValue--))[0];
+        cardTitle = "Bingo";
     }
 }
 
@@ -102,7 +106,7 @@ function generateCards(){
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">
-                <h2>Bingo Card</h2>
+                <h2>${cardTitle}</h2>
                 <table class="card">
                 ${tableArr.map(array => `<tr>
                     ${array.map(item => `<td class="cells">${item}</td>`).join("")}
