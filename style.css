@@ -20,7 +20,7 @@ body{
     width: 50px;
 }
 
-#reset-button{
+#reset-button, #print-button{
     font-size: 16px;
     background-color: paleturquoise;
     border-radius: 10%;
@@ -29,7 +29,7 @@ body{
     border: 2px solid #0aa;
 }
 
-#reset-button:hover{
+#reset-button:hover, #print-button:hover{
     border: 2px solid paleturquoise;
     background-color: #0aa;
     cursor: pointer;

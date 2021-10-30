@@ -63,10 +63,19 @@ function changeNumberOfCards(){
     generateCards();
 }
 
-//This changes the size of the card.
+//This changes the size of the card.  I could not use getElement by Classname so I had to use Ids for each item.
 function changeCardSize(){
     columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
+    if(rows == "7"){
+        document.getElementById("disabled1").disabled = true;
+        document.getElementById("disabled2").disabled = true;
+        document.getElementById("disabled3").disabled = true;
+    }else{
+        document.getElementById("disabled1").disabled = false;
+        document.getElementById("disabled2").disabled = false;
+        document.getElementById("disabled3").disabled = false;
+    }
     generateCards();
 }
 
