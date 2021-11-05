@@ -107,6 +107,7 @@ function arraySplice(array, columns){
     return newArr;
 }
 
+//This function generates a new card/s.
 function generateCards(){
     document.getElementById("cards-container").innerHTML = "";
     numberOfCardsArr.forEach(card => {
@@ -124,6 +125,13 @@ function generateCards(){
             </div>`
         )
     })
+}
+
+//This function prints only the cards by hiding the other divs.
+function printCards(){
+    document.getElementById("title").hidden = true;
+    document.getElementById("form").hidden = true;
+    window.print();
 }
 
 window.onload = function(){
