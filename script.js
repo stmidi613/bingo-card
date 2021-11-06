@@ -1,5 +1,3 @@
-console.log("Hello, World")
-
 let columns = 3;
 let rows = 3;
 
@@ -86,7 +84,6 @@ function shuffleArray(arr){
          return Math.floor(Math.random() * arr.length);
     }
     let count = arr.length;
-    console.log(arr.length)
     while(0 !== count){
         let randomInd = randInd();
         shuffledArr.push(arr.splice(randomInd, 1)[0]);
