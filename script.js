@@ -92,7 +92,6 @@ function shuffleArray(arr){
         shuffledArr.push(arr.splice(randomInd, 1)[0]);
         count--;
     }
-    console.log(shuffledArr)
     return shuffledArr;
 }
 
