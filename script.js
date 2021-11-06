@@ -116,7 +116,7 @@ function generateCards(){
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">
-                <h2>${cardTitle}</h2>
+                <h3>${cardTitle}</h3>
                 <table class="card">
                 ${tableArr.map(array => `<tr>
                     ${array.map(item => `<td class="cells">${item}</td>`).join("")}

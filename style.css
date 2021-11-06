@@ -9,7 +9,7 @@ body{
 }
 
 #form{
-    margin: 0px;
+    margin: 10px;
 }
 
 .form-item{
@@ -45,19 +45,20 @@ body{
 
 .card-wrapper{
     display: inline-block;
-    margin: 10px;
-    padding: 10px;
+    margin: 3px;
     width: max-content;
     background-color: paleturquoise;
 }
 
-h2{
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 36px;
-    text-align: center;
     width: auto;
+    height: 0px;
     color: black;
-    height: 40px;
-    border-radius: 15px;
+    /*letter-spacing: 7px;*/
 }
 
 .card{
@@ -66,9 +67,9 @@ h2{
 }
 
 .cells{
-    height: 100px;
-    width: 100px !important;
     text-align: center;
+    height: 75px;
+    width: 75px;
     border: 1px solid black;
     font: 20px solid black;
 }
