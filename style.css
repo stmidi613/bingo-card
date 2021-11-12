@@ -80,10 +80,6 @@ h3{
     max-height: 60px;
 }
 
-#seven{
-    display: none;
-}
-
 #error-display{
     color: red;
     margin-left: 20px;

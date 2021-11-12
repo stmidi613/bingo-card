@@ -34,11 +34,13 @@ function createHalloweenArr(){
 
 //This function gets the array for the generateCards function and set the visibility of 7 X 7 option.
 function typeOfCard(){
+
     cardTypeValue = document.getElementById("card-type").value;
-    if(cardTypeValue === "100" || cardTypeValue === "50"){
-        document.getElementById("seven").style.display = "unset";
+    
+    if(cardTypeValue == "100" || cardTypeValue == "50"){
+        document.getElementById("seven").disabled = false;
     }else{
-        document.getElementById("seven").style.display = "none";
+        document.getElementById("seven").disabled = true;
     }
 
     if(cardTypeValue === "halloweenArr"){
@@ -63,8 +65,10 @@ function changeNumberOfCards(){
 
 //This changes the size of the card.  I could not use getElement by Classname so I had to use Ids for each item.
 function changeCardSize(){
+
     columns = document.getElementById("card-size").value;
     rows = document.getElementById("card-size").value;
+    
     if(rows == "7"){
         document.getElementById("disabled1").disabled = true;
         document.getElementById("disabled2").disabled = true;
@@ -79,11 +83,15 @@ function changeCardSize(){
 
 //This rearranges the array so that all cards are different and random.
 function shuffleArray(arr){
+
     let shuffledArr = [];
+    
     function randInd(){
          return Math.floor(Math.random() * arr.length);
     }
+    
     let count = arr.length;
+    
     while(0 !== count){
         let randomInd = randInd();
         shuffledArr.push(arr.splice(randomInd, 1)[0]);
@@ -96,6 +104,7 @@ function shuffleArray(arr){
 function arraySplice(array, columns){ 
     let newArr = [];
     let count = 1;
+    
     while(count <= rows){
         newArr.push(array.splice(0, columns));
         count++;
