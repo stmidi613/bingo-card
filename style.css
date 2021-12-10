@@ -9,7 +9,10 @@ body{
 }
 
 #form{
-    margin: 10px;
+    margin: auto;
+    max-width: max-content;
+    display: flex;
+
 }
 
 .form-item{
@@ -58,7 +61,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 36px;
+    font-size: 28px;
     width: auto;
     height: 0px;
     color: black;
@@ -85,4 +88,24 @@ h3{
 #error-display{
     color: red;
     margin-left: 20px;
+}
+
+@media print {
+    body{
+        margin: 0;
+        background-color: #fff;
+        float: none;
+        width: 100%;
+    }
+
+    @page { margin: 2cm }
+
+    #title, #form{
+        display: none !important;
+    }
+
+    div.card-wrapper{
+        display: block;
+        break-inside: avoid;
+    }
 }

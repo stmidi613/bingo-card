@@ -123,19 +123,17 @@ function generateCards(){
             `<div class="card-wrapper">
                 <h3>${cardTitle}</h3>
                 <table class="card">
-                ${tableArr.map(array => `<tr>
-                    ${array.map(item => `<td class="cells">${item}</td>`).join("")}
-                    </tr>`).join("")}
+                    ${tableArr.map(array => `<tr>
+                        ${array.map(item => `<td class="cells">${item}</td>`).join("")}
+                        </tr>`).join("")}
                 </table>
             </div>`
         )
     })
 }
 
-//This function prints only the cards by hiding the other divs.
+//This function prints only the cards.
 function printCards(){
-    document.getElementById("title").hidden = true;
-    document.getElementById("form").hidden = true;
     window.print();
 }
 
