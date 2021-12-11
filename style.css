@@ -96,15 +96,20 @@ h3{
         background-color: #fff;
         float: none;
         width: 100%;
+        break-inside: avoid;
     }
 
-    @page { margin: 2cm }
+    /* @page { margin: 1cm } */
 
     #title, #form{
         display: none !important;
     }
 
-    div.card-wrapper{
+    h3{
+        break-after: avoid;
+    }
+
+    table{
         display: block;
         break-inside: avoid;
     }

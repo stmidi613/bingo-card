@@ -121,8 +121,8 @@ function generateCards(){
         document.getElementById("cards-container").insertAdjacentHTML("beforeend",
     
             `<div class="card-wrapper">
+            <table class="card">
                 <h3>${cardTitle}</h3>
-                <table class="card">
                     ${tableArr.map(array => `<tr>
                         ${array.map(item => `<td class="cells">${item}</td>`).join("")}
                         </tr>`).join("")}
@@ -130,11 +130,6 @@ function generateCards(){
             </div>`
         )
     })
-}
-
-//This function prints only the cards.
-function printCards(){
-    window.print();
 }
 
 window.onload = function(){
