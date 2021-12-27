@@ -45,16 +45,15 @@ body{
     justify-content: space-evenly;
     width: 100vw;
     height: max-content;
-    margin: auto !important;
+    margin: auto;
 }
 
 .card-wrapper{
     display: block;
-    margin: 10px;
     width: max-content;
+    margin: 10px;
     background-color: paleturquoise;
     border: 1px solid black;
-
 }
 
 h3{
@@ -96,14 +95,21 @@ h3{
         float: none;
         width: 100%;
     }
-
+    
     @page { 
         margin-top: 60px;
         margin-bottom: 60px;
     }
-
+    
     #title, #form{
         display: none !important;
+    }
+
+    #cards-container{
+        display: block !important;
+        height: max-content;
+        width: max-content;
+        margin: auto;
     }
 
     div.card-wrapper{
