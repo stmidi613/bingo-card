@@ -131,7 +131,7 @@ function generateCards(){
         )
     })
 }
-
-window.onload = function(){
-    generateCards();
-}
+    
+    window.onload = function(){
+        generateCards();
+    }
